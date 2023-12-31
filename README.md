@@ -8,6 +8,7 @@ Welcome to CRUD-APP, a simple and powerful CRUD (Create, Read, Update, Delete) a
 
 ## Getting Started
 To begin using CRUD-APP, follow these steps:
+Make sure you install Node.js [https://nodejs.org/en] on your locall machine
 
 Install Dependencies:
 Navigate to the project directory and install the required dependencies.
@@ -15,7 +16,14 @@ Navigate to the project directory and install the required dependencies.
 run:
 npm install
 
+also install nodemon package 
+npm install -g nodemon
+
+
 Run the Application:
+by typing: nodemon server.js or nodemon
+
+
 Start the CRUD-APP server by running the following command:
 
 By default, the application will run on http://localhost:7700. You can access the application through your web browser.
@@ -23,28 +31,34 @@ By default, the application will run on http://localhost:7700. You can access th
 API Endpoints
 CRUD-APP provides the following API endpoints for managing data:
 
-# POST /api/products/create
+POST /api/products/create
 
 Create a new resource.
 Request Body: JSON with resource data.
 
-# GET /api/products/:id
+
+GET /api/products/all
+
+Retrieve details of all resource.
+
+
+GET /api/products/:id
 
 Retrieve details of a specific resource.
 Parameters: id - Resource identifier.
 
-# PUT /api/products/:id
+PUT /api/products/:id
 
-# Update an existing resource.
+Update an existing resource.
 Parameters: id - Resource identifier.
 Request Body: JSON with updated resource data.
 
 DELETE /api/products/:id
 
-# Delete a resource.
+Delete a resource.
 Parameters: id - Resource identifier.
 
-## Conclusion
+Conclusion
 With CRUD-APP, you have a robust foundation for managing your data through simple API endpoints. Feel free to customize and extend the application based on your specific requirements.
 
 Happy coding!
