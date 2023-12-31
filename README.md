@@ -31,34 +31,34 @@ By default, the application will run on http://localhost:7700. You can access th
 API Endpoints
 CRUD-APP provides the following API endpoints for managing data:
 
-POST /api/products/create
+# POST /api/products/create
 
 Create a new resource.
 Request Body: JSON with resource data.
 
 
-GET /api/products/all
+# GET /api/products/all
 
 Retrieve details of all resource.
 
 
-GET /api/products/:id
+# GET /api/products/:id
 
 Retrieve details of a specific resource.
 Parameters: id - Resource identifier.
 
-PUT /api/products/:id
+# PUT /api/products/:id
 
 Update an existing resource.
 Parameters: id - Resource identifier.
 Request Body: JSON with updated resource data.
 
-DELETE /api/products/:id
+# DELETE /api/products/:id
 
 Delete a resource.
 Parameters: id - Resource identifier.
 
-Conclusion
+# Conclusion
 With CRUD-APP, you have a robust foundation for managing your data through simple API endpoints. Feel free to customize and extend the application based on your specific requirements.
 
 Happy coding!
