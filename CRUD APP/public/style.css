@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* border: solid 1pt rgba(0, 0, 0, 0.2); */
+  text-decoration: none;
+  letter-spacing: 1pt;
+}
+/*  */
+.nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 5rem;
+  background: rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.brand {
+  display: grid;
+  margin: 0.5rem;
+}
+.brandName {
+  font-size: 1.2rem;
+  font-weight: bolder;
+  margin-bottom: -0.4rem;
+}
+a {
+  text-decoration: none;
+}
+.sometext {
+  font-size: 0.6rem;
+}
+
+.searchBox {
+  /* display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-gap: 0.5rem; */
+  margin: 0.5rem;
+}
+/*  */
+.mainContainer {
+  position: absolute;
+  top: 5em;
+  bottom: 0;
+  width: 100%;
+  display: grid;
+  overflow-x: scroll;
+  /* background: rgba(0, 0, 0, 0.9); */
+}
+
+.outterEle {
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+.detailEle {
+  display: grid;
+  padding: 2pt;
+}
+.imgEle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  display: grid;
+}
+.image {
+  width: 100%;
+  font-size: 3.4rem;
+}
+.productName,
+.currPrice,
+.prevPrice,
+.category,
+.quantity {
+  padding: 2pt;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bolder;
+  font-size: 8pt;
+}
+/*  */
+form {
+  display: grid;
+  grid-gap: 1rem;
+}
+
+/* Mobile Devices (portrait and landscape) */
+@media only screen and (max-width: 767px) {
+  .renderedItems {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 0.6rem;
+    margin: 0.5rem;
+  }
+}
+
+/* Tablets (portrait and landscape) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .renderedItems {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+
+    grid-gap: 0.6rem;
+    margin: 0.5rem;
+  }
+}
+
+/* Desktops and larger screens */
+@media only screen and (min-width: 992px) {
+  .renderedItems {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+
+    grid-gap: 0.6rem;
+    margin: 0.5rem;
+  }
+}

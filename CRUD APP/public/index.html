@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD API</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- FOR ICONS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+  </head>
+  <body class="bg-white">
+    <div class="nav">
+      <a href="" class="brand">
+        <h1 class="brandName text-dark">CRUD API</h1>
+        <div class="sometext text-dark">MANAGE YOU PRODUCTS</div>
+      </a>
+      <div class="searchBox">
+        <button
+          id="addBtn"
+          class="bg-primary btn"
+          data-bs-toggle="modal"
+          data-bs-target="#form"
+        >
+          <i class="bi-cloud-plus-fill"></i>
+        </button>
+      </div>
+    </div>
+    <!--  -->
+    <div class="mainContainer" id="container"></div>
+    <!--  -->
+    <!-- The Modal -->
+    <div class="modal border-0" id="form">
+      <div class="modal-dialog border-0">
+        <div class="modal-content border-0">
+          <!-- Modal Header -->
+          <div class="modal-header border-0">
+            <h4 class="modal-title" id="modalName">NEW</h4>
+          </div>
+          <!-- Modal body -->
+          <div class="modal-body border-0 m-2">
+            <div class="forms">
+              <form id="productForms">
+                <div class="productForms form-floating">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="productName"
+                    placeholder="Product Name"
+                    name="productName"
+                    value="Name"
+                  />
+                  <label for="productName">Product Name</label>
+                </div>
+                <!-- <div class="productForms form-floating">
+                  <input
+                    type="file"
+                    class="form-control"
+                    id="productImage"
+                    name="productImage"
+                    accept="image/*"
+                    required
+                  />
+                  <label for="productImage">Product Image</label>
+                </div> -->
+                <div class="productForms form-floating">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="currPrice"
+                    placeholder="Current Price"
+                    name="currPrice"
+                    value="2400"
+                  />
+                  <label for="currPrice">Current Price</label>
+                </div>
+                <div class="productForms form-floating">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="prevPrice"
+                    placeholder="Previous Price"
+                    name="prevPrice"
+                    value="2700"
+                  />
+                  <label for="prevPrice">Previous Price</label>
+                </div>
+                <div class="productForms form-floating">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="category"
+                    placeholder="Category"
+                    name="category"
+                    value="Category"
+                  />
+                  <label for="category">Category</label>
+                </div>
+                <div class="productForms form-floating">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="quantity"
+                    placeholder="quantity"
+                    name="quantity"
+                    value="10"
+                  />
+                  <label for="quantity">Quantity</label>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!--  -->
+          <!-- Modal footer -->
+          <div class="modal-footer border-0">
+            <!--  -->
+            <button id="addBtn" class="bg-danger btn" data-bs-dismiss="modal">
+              <i class="bi-stop-btn-fill"></i>
+            </button>
+            <!--  -->
+            <button
+              id="submit"
+              class="bg-primary btn"
+              data-bs-dismiss="modal"
+              value="new"
+            >
+              <i class="bi-cloud-upload-fill"></i>
+            </button>
+            <!--  -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  -->
+    <!-- The Modal -->
+    <div class="modal border-0" id="details">
+      <div class="modal-dialog border-0">
+        <div class="modal-content border-0">
+          <!-- Modal Header -->
+          <div class="modal-header border-0">
+            <h4 class="modal-title" id="modalName">Details</h4>
+          </div>
+          <!-- Modal body -->
+          <div class="modal-body border-0 m-2">
+            <div class="card outterEle">
+              <div class="imgEle" id="detailsImgEle">
+                <i class="image bi-image-fill"></i>
+              </div>
+              <div class="detailEle" id="detailEle">
+                <div class="productName" id="detailsProductName"></div>
+                <div class="currPrice" id="detailsCurrPrice"></div>
+                <div class="prevPrice" id="detailsPrevPrice"></div>
+                <div class="category" id="detailsCategory"></div>
+                <div class="quantity" id="detailsQuantity"></div>
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <!-- Modal footer -->
+          <div class="modal-footer border-0">
+            <button
+              type="button"
+              class="btn btn-danger"
+              id="trashCan"
+              data-id=""
+            >
+              <i class="bi-trash-fill" data-bs-dismiss="modal"></i>
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              id="upDate"
+              data-id=""
+            >
+              <i
+                class="bi-arrow-clockwise"
+                data-bs-toggle="modal"
+                data-bs-target="#form"
+              ></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
